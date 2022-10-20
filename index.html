@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Weather App</title>
-        <script src="./main.js" defer></script>
-    </head>
-    <body></body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="icon" href="./images/weather.png" />
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="./images/weather.png" alt="weather logo">
+        <span>Weather Forecast</span>
+        <input type="text" name="search" id="search" placeholder="Search City" maxlength="20">
+    </header>
+
+    <div class="container">
+        <div class="current-info">
+            <div class="left-box">Weather Info</div>
+            <div class="right-box">Aux Info</div>
+        </div>
+        <div class="weather-info">
+            <div class="monday">Monday</div>
+            <div class="tuesday">Tuesday</div>
+            <div class="wednesday">Wednesday</div>
+            <div class="thursday">Thursday</div>
+            <div class="friday">Friday</div>
+            <div class="saturday">Saturday</div>
+            <div class="sunday">Sunday</div>
+        </div>
+    </div>
+
+    <footer><span>Copyright © 2022 <a href="https://github.com/jyu-1/weather"
+                title="github link to this project">jyu-1</a>
+        </span>
+    </footer>
+</body>
+
 </html>
