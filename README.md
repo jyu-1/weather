@@ -7,4 +7,4 @@ Async and await will also be used to implement promise so our application can be
 # Limitation with the OpenWeatherMap Free API
 
 Due to the limitation of the free API, many useful forecast info such as daily high/low and hourly forecast are not available.
-We were able to fetch forecast every 3 hours up to 5 days.
+The only forecast that is available is every 3 hours up to 5 days.
