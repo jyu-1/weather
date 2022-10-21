@@ -24,7 +24,7 @@ function dayResolver(num) {
 
 function timeResolver(num) {
     const time = new Date(num * 1000);
-    if (time < 12) {
+    if (time.getHours() < 12) {
         return `${String(time.getHours()).padStart(2, "0")}:${String(
             time.getMinutes()
         ).padStart(2, "0")} AM`;
