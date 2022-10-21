@@ -145,10 +145,6 @@ footer a {
 }
 
 @media screen and (max-width: 480px) {
-    body {
-        background-image: url(./assets/mobile-rainy.gif);
-    }
-
     header input {
         max-width: 300px;
     }
