@@ -6,52 +6,27 @@
     box-sizing: border-box;
 }
 
-/* Add Borders to items */
-
-header,
-.container,
-footer,
-.weather-info div,
-.current-info div {
-    border: 1px solid black;
-}
-
 body {
     font-family: "Roboto", sans-serif;
     background-color: rgb(133, 216, 255);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    min-width: 300px;
 }
 
 /* Header */
 header {
     flex: 0 0 100px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-header img {
-    flex: 0 0 auto;
-    max-width: 90px;
-    max-height: 90px;
-    margin: 0 15px 0 50px;
-}
-
-header span {
-    flex: 0 0 auto;
-    margin-right: 15px;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 header input {
-    flex: 0 0 auto;
-    margin: auto;
+    flex: 1 1 auto;
     height: 40px;
-    width: 30%;
+    min-width: 200px;
+    max-width: 400px;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -59,33 +34,31 @@ header input {
 
 /* Main Body */
 .container {
-    flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-/* Current Weather Info */
-
-.current-info {
-    margin: 25px;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Forecast Box */
-
-.weather-info {
-    margin: 25px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.weather-info div {
-    flex: 1 1 auto;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    flex: 1;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+}
+
+.current-weather {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.current-weather-extra {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
 }
 
 /* Footer */
@@ -94,7 +67,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 }
 
 footer span {

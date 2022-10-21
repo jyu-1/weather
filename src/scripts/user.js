@@ -1,16 +1,18 @@
-export { user };
+export { user, forecast };
 
 const user = {
-    location: "los angeles",
     unit: "imperial",
     symbol: "F",
+    location: "chicago",
     current_temp: 0,
-    min_temp: 0,
-    max_temp: 0,
-    humidity: 0,
+    feels_like: 0,
+    condition: "",
     sunrise: 0,
     sunset: 0,
+    humidity: 0,
+    pressure: 0,
     timezone: 0,
-    condition: "",
-    current_time: 0,
+    icon: "",
 };
+
+const forecast = {};

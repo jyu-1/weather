@@ -1,4 +1,4 @@
-import { user } from "./user";
+import { user, forecast } from "./user";
 import { displayWeather } from "./displayWeather";
 export { getWeather };
 
@@ -17,7 +17,6 @@ async function getWeather() {
             const dataWeather = await responseWeather.json();
             const dataForecast = await responseForecast.json();
             parseWeather(dataWeather);
-            parseForecast(dataForecast);
         } else if (responseWeather.status === 404) {
             console.log("City not Found");
         } else {
@@ -26,22 +25,18 @@ async function getWeather() {
     } catch (err) {
         console.log("Failed to get Data");
     }
+    displayWeather();
 }
 
 function parseWeather(weather) {
     user.location = weather.name;
     user.current_temp = weather.main.temp;
-    user.min_temp = weather.main.temp_min;
-    user.max_temp = weather.main.temp_max;
-    user.humidity = weather.main.humidity;
+    user.feels_like = weather.main.feels_like;
+    user.condition = weather.weather[0].main;
     user.sunrise = weather.sys.sunrise;
     user.sunset = weather.sys.sunset;
+    user.humidity = weather.main.humidity;
+    user.pressure = weather.main.pressure;
     user.timezone = weather.timezone;
-    user.condition = weather.weather[0].main;
-    user.current_time = weather.dt;
-    displayWeather();
-}
-
-function parseForecast(forecast) {
-    console.log(forecast);
+    user.icon = weather.weather[0].icon;
 }

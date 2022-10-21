@@ -1,21 +1,24 @@
-import { user } from "./user";
+import { user, forecast } from "./user";
 export { displayWeather };
 
 function displayWeather() {
+    const icon = document.querySelector(".icon");
     const city = document.querySelector(".city");
-    const cTemp = document.querySelector(".current-temp");
+    const temp = document.querySelector(".current-temp");
+    const feels = document.querySelector(".feels");
     const condition = document.querySelector(".condition");
-    const todayHigh = document.querySelector(".high");
-    const todayLow = document.querySelector(".low");
-    const humidity = document.querySelector(".humidity");
     const sunrise = document.querySelector(".sunrise");
     const sunset = document.querySelector(".sunset");
+    const humidity = document.querySelector(".humidity");
+    const pressure = document.querySelector(".pressure");
+
+    icon.src = `http://openweathermap.org/img/wn/${user.icon}@2x.png`;
     city.textContent = user.location;
-    cTemp.textContent = `${user.current_temp} ${user.symbol}`;
+    temp.textContent = `${user.current_temp} ${user.symbol}`;
+    feels.textContent = `Feels like ${user.feels_like} ${user.symbol}`;
     condition.textContent = user.condition;
-    todayHigh.textContent = `High: ${user.max_temp}`;
-    todayLow.textContent = `Low: ${user.min_temp}`;
-    humidity.textContent = `Humidity: ${user.humidity}%`;
     sunrise.textContent = `Sunrise: ${user.sunrise}`;
     sunset.textContent = `Sunset: ${user.sunset}`;
+    humidity.textContent = `Humidity: ${user.humidity}%`;
+    pressure.textContent = `Pressure: ${user.pressure} hPA`;
 }
