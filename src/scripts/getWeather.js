@@ -1,4 +1,5 @@
 import { user } from "./user";
+import { displayWeather } from "./displayWeather";
 export { getWeather };
 
 async function getWeather() {
@@ -38,6 +39,7 @@ function parseWeather(weather) {
     user.timezone = weather.timezone;
     user.condition = weather.weather[0].main;
     user.current_time = weather.dt;
+    displayWeather();
 }
 
 function parseForecast(forecast) {
