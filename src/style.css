@@ -17,7 +17,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    min-width: 300px;
 }
 
 /* Header */
@@ -26,6 +25,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
 
 header input {
@@ -36,6 +36,23 @@ header input {
     text-align: center;
     border: none;
     border-radius: 5px;
+}
+
+#change-unit {
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+#change-unit:hover {
+    cursor: pointer;
+    background-color: rgb(201, 201, 201);
+}
+
+#change-unit:active {
+    background-color: rgb(143, 143, 143);
 }
 
 /* Main Body */
@@ -51,7 +68,8 @@ header input {
     width: 100px;
 }
 
-.city {
+.city,
+.current-day {
     font-size: 2rem;
     font-weight: bold;
 }
@@ -61,6 +79,7 @@ header input {
     font-weight: bold;
 }
 
+.current-day,
 .city,
 .current-temp,
 .feels,
@@ -90,22 +109,22 @@ header input {
     border-radius: 5px;
 }
 
-#change-unit {
-    border: none;
-    background-color: white;
-    height: 40px;
-    width: 100px;
-    margin-top: 10px;
-    border-radius: 10px;
+/* Forecast */
+.forecast {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    margin: 10px;
+    text-align: center;
+    width: 600px;
+    border-radius: 5px;
 }
 
-#change-unit:hover {
-    cursor: pointer;
-    background-color: rgb(201, 201, 201);
-}
-
-#change-unit:active {
-    background-color: rgb(143, 143, 143);
+.forecast div {
+    flex: 0 0 100px;
+    color: white;
 }
 
 /* Footer */
@@ -129,4 +148,25 @@ footer a {
     header input {
         max-width: 300px;
     }
+
+    .forecast {
+        width: 300px;
+        flex: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(193, 58, 255);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(213, 122, 255);
 }

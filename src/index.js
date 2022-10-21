@@ -1,6 +1,6 @@
 import "./style.css";
-import { getWeather } from "./scripts/getWeather";
-import { user } from "./scripts/user";
+import user from "./scripts/user";
+import getWeather from "./scripts/getWeather";
 
 const search = document.querySelector("#search");
 search.addEventListener("keypress", (event) => {
@@ -15,11 +15,11 @@ change.addEventListener("click", () => {
     if (user.unit === "imperial") {
         user.unit = "metric";
         user.symbol = "C";
-        change.textContent = "Change to Fahrenheit";
+        change.textContent = "°C";
     } else {
         user.unit = "imperial";
         user.symbol = "F";
-        change.textContent = "Change to Celsius";
+        change.textContent = "°F";
     }
     getWeather();
 });
