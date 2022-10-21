@@ -8,13 +8,11 @@
 
 /* Add Borders to items */
 
-.weather-info div {
-    border: 1px solid black;
-}
-
 header,
 .container,
-footer {
+footer,
+.weather-info div,
+.current-info div {
     border: 1px solid black;
 }
 
@@ -64,29 +62,27 @@ header input {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 /* Current Weather Info */
 
 .current-info {
-    margin: 50px;
+    margin: 25px;
     display: flex;
-    width: 500px;
     justify-content: space-between;
 }
 
 /* Forecast Box */
 
 .weather-info {
-    margin-top: 50px;
+    margin: 25px;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .weather-info div {
-    width: 500px;
-    flex: 0 0 100px;
+    flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
