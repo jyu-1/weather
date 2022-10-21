@@ -13,10 +13,12 @@
 <body>
     <header>
         <input type="text" name="search" id="search" placeholder="Search City" maxlength="20">
+        <button id="change-unit">°F</button>
     </header>
 
     <div class="container">
         <div class="current-weather">
+            <div class="current-day"></div>
             <img src="./images/invisible.png" alt="weather icon" class="icon">
             <div class="city"></div>
             <div class="current-temp"></div>
@@ -28,7 +30,14 @@
             <div class="sunset"></div>
             <div class="humidity"></div>
             <div class="pressure"></div>
-            <button id="change-unit">Change to Celsius</button>
+        </div>
+
+        <div class="forecast">
+            <div class="forecast-block">
+                <div class="day">Saturday</div>
+                <div class="hour">3PM</div>
+                <div class="temp">70 C</div>
+            </div>
         </div>
     </div>
 
