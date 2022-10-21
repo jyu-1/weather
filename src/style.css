@@ -8,10 +8,16 @@
 
 body {
     font-family: "Nunito Sans", sans-serif;
+    background-image: url(./assets/rainy.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-color: rgb(133, 216, 255);
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 300px;
 }
 
 /* Header */
@@ -67,7 +73,7 @@ header input {
 }
 
 .current-weather {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
     margin: 10px;
     text-align: center;
@@ -76,7 +82,7 @@ header input {
 }
 
 .current-weather-extra {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
     margin: 10px;
     text-align: center;
@@ -112,4 +118,15 @@ footer {
 
 footer span {
     flex-shrink: 1;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    header input {
+        max-width: 300px;
+    }
 }
