@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 
 * {
     margin: 0px;
@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     background-color: rgb(133, 216, 255);
     display: flex;
     flex-direction: column;
@@ -45,20 +45,61 @@ header input {
     width: 100px;
 }
 
+.city {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.current-temp {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.city,
+.current-temp,
+.feels,
+.condition,
+.sunrise,
+.sunset,
+.humidity,
+.pressure {
+    color: white;
+}
+
 .current-weather {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px;
     margin: 10px;
     text-align: center;
     width: 300px;
+    border-radius: 5px;
 }
 
 .current-weather-extra {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px;
     margin: 10px;
     text-align: center;
     width: 300px;
+    border-radius: 5px;
+}
+
+#change-unit {
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#change-unit:hover {
+    cursor: pointer;
+    background-color: rgb(201, 201, 201);
+}
+
+#change-unit:active {
+    background-color: rgb(143, 143, 143);
 }
 
 /* Footer */

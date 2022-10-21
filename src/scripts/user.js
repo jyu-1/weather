@@ -1,9 +1,9 @@
-export { user, forecast };
+export { user };
 
 const user = {
     unit: "imperial",
     symbol: "F",
-    location: "chicago",
+    location: "los angeles",
     current_temp: 0,
     feels_like: 0,
     condition: "",
@@ -14,5 +14,3 @@ const user = {
     timezone: 0,
     icon: "",
 };
-
-const forecast = {};

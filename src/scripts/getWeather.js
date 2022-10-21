@@ -1,4 +1,4 @@
-import { user, forecast } from "./user";
+import { user } from "./user";
 import { displayWeather } from "./displayWeather";
 export { getWeather };
 
@@ -17,15 +17,15 @@ async function getWeather() {
             const dataWeather = await responseWeather.json();
             const dataForecast = await responseForecast.json();
             parseWeather(dataWeather);
+            displayWeather();
         } else if (responseWeather.status === 404) {
-            console.log("City not Found");
+            alert("City not found");
         } else {
-            console.log("Bad Request");
+            alert("Bad Request");
         }
     } catch (err) {
-        console.log("Failed to get Data");
+        alert("Failed to get Data");
     }
-    displayWeather();
 }
 
 function parseWeather(weather) {
