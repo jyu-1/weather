@@ -25,14 +25,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
 }
 
 header input {
     flex: 1 1 auto;
     height: 40px;
     min-width: 200px;
-    max-width: 400px;
+    max-width: 500px;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -94,18 +94,18 @@ header input {
 .current-weather {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
-    margin: 10px;
+    margin-bottom: 30px;
     text-align: center;
-    width: 300px;
+    width: 400px;
     border-radius: 5px;
 }
 
 .current-weather-extra {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
-    margin: 10px;
+    margin-bottom: 30px;
     text-align: center;
-    width: 300px;
+    width: 400px;
     border-radius: 5px;
 }
 
@@ -116,10 +116,10 @@ header input {
     overflow-x: auto;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
-    margin: 10px;
     text-align: center;
     width: 600px;
     border-radius: 5px;
+    gap: 5px;
 }
 
 .forecast div {
@@ -145,13 +145,34 @@ footer a {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        background-image: url(./assets/mobile-rainy.gif);
+    }
+
     header input {
         max-width: 300px;
     }
 
+    header {
+        flex: 0 0 60px;
+        gap: 5px;
+    }
+
+    .current-weather {
+        width: 300px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .current-weather-extra {
+        width: 300px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
     .forecast {
         width: 300px;
-        flex: 1;
+        padding: 20px;
     }
 }
 
