@@ -60,7 +60,7 @@ function forecastList() {
         icon.src = `http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`;
         date.textContent = `${dateResolver(element.dt)}`;
         hour.textContent = timeResolver(element.dt);
-        temp.textContent = `${Math.round(element.main.temp)} ${user.symbol} `;
+        temp.textContent = `${Math.round(element.main.temp)}° ${user.symbol} `;
 
         forecastBlock.appendChild(day);
         forecastBlock.appendChild(icon);
@@ -87,7 +87,7 @@ export default function displayWeather() {
     date.textContent = dayResolver(user.current_time);
     icon.src = `http://openweathermap.org/img/wn/${user.icon}@2x.png`;
     city.textContent = user.location;
-    temp.textContent = `${Math.round(user.current_temp)} ${user.symbol}`;
+    temp.textContent = `${Math.round(user.current_temp)}° ${user.symbol}`;
     feels.textContent = `Feels like ${Math.round(user.feels_like)} ${
         user.symbol
     }`;
